@@ -13,7 +13,7 @@ public class MathCalculator {
     }
 
     public static double sumAllMet(double first, double second) {
-        return sub(first, second)
+        return sum(first, second)
                 + multiply(first, second)
                 + divide(first, second)
                 + sub(first, second);
