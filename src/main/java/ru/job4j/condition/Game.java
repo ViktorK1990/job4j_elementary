@@ -12,7 +12,7 @@ public class Game {
             System.out.println("Start - tetris");
         }
     }
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         Game.menu("tanks");
     }
 }
