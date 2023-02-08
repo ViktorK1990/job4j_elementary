@@ -1,30 +1,26 @@
 package ru.job4j.condition;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class PointTest {
 
     @Test
-    public void whenX3Y4X22Y1then316() {
-        int x = 3;
-        int y = 4;
-        int x2 = 2;
-        int y2 = 1;
-        double expected = 3.16;
-        double out = Point.distance(x, y, x2, y2);
+    public void whenTochka02Huechka02then00() {
+        Point tochka = new Point(0, 2);
+        Point huechka = new Point(0, 2);
+        double expected = 0.0;
+        double out = tochka.distance(huechka);
         Assert.assertEquals(expected, out, 0.01);
     }
-
     @Test
-    public void whenX4Y5X22Y1then316() {
-        int x = 4;
-        int y = 5;
-        int x2 = 2;
-        int y2 = 1;
-        double expected = 4.47;
-        double out = Point.distance(x, y, x2, y2);
+    public void whenTochka03Huechka12then141() {
+        Point tochka = new Point(0, 3);
+        Point huechka = new Point(1, 2);
+        double expected = 1.41;
+        double out = tochka.distance(huechka);
         Assert.assertEquals(expected, out, 0.01);
-
     }
+
 }
