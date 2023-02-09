@@ -7,19 +7,27 @@ import org.junit.Test;
 public class PointTest {
 
     @Test
-    public void whenTochka02Huechka02then00() {
-        Point tochka = new Point(0, 2);
-        Point huechka = new Point(0, 2);
+    public void whenA02B02then00() {
+        Point a = new Point(0, 2);
+        Point b = new Point(0, 2);
         double expected = 0.0;
-        double out = tochka.distance(huechka);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
     @Test
-    public void whenTochka03Huechka12then141() {
-        Point tochka = new Point(0, 3);
-        Point huechka = new Point(1, 2);
+    public void whenA03B12then141() {
+        Point a = new Point(0, 3);
+        Point b = new Point(1, 2);
         double expected = 1.41;
-        double out = tochka.distance(huechka);
+        double out = a.distance(b);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+    @Test
+    public void whenTochka123Huechka314then141() {
+        Point a = new Point(1, 2,3);
+        Point b = new Point(3, 1,4);
+        double expected = 2.44;
+        double out = a.distance3d(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
