@@ -6,18 +6,21 @@ public class Shop {
         products[0] = new Product("Milk", 10);
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
-        System.out.println(indexOfNull(products));
+        for (Product product : products) {
+            if (product != null) {
+                System.out.println(product.getName());
+
+            }
+        }
     }
 
     public static int indexOfNull(Product[] products) {
-        int empty = -1;
         for (int i = 0; i < products.length; i++) {
             if (products[i] == null) {
-                empty = i;
-                break;
+                return i;
             }
         }
-        return empty;
+        return -1;
 
     }
 }
